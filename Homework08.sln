@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task01.List", "Task01.List\Task01.List.csproj", "{275C347F-6C02-46F6-B0C4-96B774251EC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task02.PhoneBook", "Task02.PhoneBook\Task02.PhoneBook.csproj", "{319D7E13-76D0-484E-8EF0-9BA4F54F4013}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task02.PhoneBook", "Task02.PhoneBook\Task02.PhoneBook.csproj", "{319D7E13-76D0-484E-8EF0-9BA4F54F4013}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task03.Repeating", "Task03.Repeating\Task03.Repeating.csproj", "{1242F75D-969A-4A87-8AB0-DB5E109729F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{319D7E13-76D0-484E-8EF0-9BA4F54F4013}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{319D7E13-76D0-484E-8EF0-9BA4F54F4013}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{319D7E13-76D0-484E-8EF0-9BA4F54F4013}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1242F75D-969A-4A87-8AB0-DB5E109729F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1242F75D-969A-4A87-8AB0-DB5E109729F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1242F75D-969A-4A87-8AB0-DB5E109729F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1242F75D-969A-4A87-8AB0-DB5E109729F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
