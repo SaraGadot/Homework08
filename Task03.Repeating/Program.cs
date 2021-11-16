@@ -1,4 +1,6 @@
-﻿var repeats = new HashSet<int>();
+﻿using Task03.Repeating;
+
+var repeats = new Repeats();
 for (; ; )
 {
     Console.WriteLine("Введите число (или Enter для выхода):");
@@ -7,14 +9,13 @@ for (; ; )
     {
         break;
     }
-    if (repeats.Contains(number.Value))
+    if (repeats.TryAdd(number.Value))
     {
-        Console.WriteLine("Такое число уже было введено ранее");
+        Console.WriteLine("Число успешно сохранено");
     }
     else
     {
-        repeats.Add(number.Value);
-        Console.WriteLine("Число успешно сохранено");
+        Console.WriteLine("Такое число уже было введено ранее");
     }
 
 }
