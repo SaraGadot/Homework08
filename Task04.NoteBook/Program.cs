@@ -1,30 +1,21 @@
 ﻿using Task04.NoteBook;
 
-var person = InputPerson();
+Console.WriteLine("Введите ФИО:");
+var name = Console.ReadLine();
+Console.WriteLine("Введите название улицы:");
+var street = Console.ReadLine();
+Console.WriteLine("Введите номер дома:");
+var houseNumber = Console.ReadLine();
+Console.WriteLine("Введите номер квартиры:");
+var flatNumber = Console.ReadLine();
+Console.WriteLine("Введите номер мобильного телефона:");
+var mobilePhone = Console.ReadLine();
+Console.WriteLine("Введите номер домашнего телефона:");
+var flatPhone = Console.ReadLine();
+
+var person = new Person(name, street, houseNumber, flatNumber, mobilePhone, flatPhone);
 person.Save("person.xml");
 
-/// <summary>
-/// Ввести данные конаткта с клавиатуры
-/// </summary>
-static Person InputPerson()
-{
-    Console.WriteLine("Введите ФИО:");
-    var name = Console.ReadLine();
-    Console.WriteLine("Введите название улицы:");
-    var street = Console.ReadLine();
-    Console.WriteLine("Введите номер дома:");
-    var houseNumber = Console.ReadLine();
-    Console.WriteLine("Введите номер квартиры:");
-    var flatNumber = Console.ReadLine();
-    Console.WriteLine("Введите номер мобильного телефона:");
-    var mobilePhone = Console.ReadLine();
-    Console.WriteLine("Введите номер домашнего телефона:");
-    var flatPhone = Console.ReadLine();
-
-    return new Person(name, street, houseNumber, flatNumber, mobilePhone, flatPhone);
-
-
-}
 
 
 
