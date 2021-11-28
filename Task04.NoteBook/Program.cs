@@ -3,6 +3,9 @@
 var person = InputPerson();
 person.Save("person.xml");
 
+/// <summary>
+/// Ввести данные конаткта с клавиатуры
+/// </summary>
 static Person InputPerson()
 {
     Console.WriteLine("Введите ФИО:");
@@ -17,15 +20,9 @@ static Person InputPerson()
     var mobilePhone = Console.ReadLine();
     Console.WriteLine("Введите номер домашнего телефона:");
     var flatPhone = Console.ReadLine();
-    return new Person
-    {
-        Name = name,
-        Street = street,
-        HouseNumber = houseNumber,
-        FlatNumber = flatNumber,
-        MobilePhone = mobilePhone,
-        FlatPhone = flatPhone
-    };
+
+    return new Person(name, street, houseNumber, flatNumber, mobilePhone, flatPhone);
+
 
 }
 
