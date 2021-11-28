@@ -1,45 +1,31 @@
-﻿var phoneBook = FillPhoneBook();
-FindNameFromPhoneBook(phoneBook);
+﻿using Task02.PhoneBook;
 
+var phoneBook = new PhoneBook();
 
-static Dictionary<string, string> FillPhoneBook()
+for (; ; )
 {
-    var phoneBook = new Dictionary<string, string>();
-
-    for (; ; )
+    Console.WriteLine("Введите номер телефона или нажмите Enter для окончания");
+    var phone = Console.ReadLine();
+    if (phone == "")
     {
-        Console.WriteLine("Введите номер телефона или нажмите Enter для окончания");
-        var phone = Console.ReadLine();
-        if (phone == "")
-        {
-            break;
-        }
-        Console.WriteLine("Введите ФИО владельца");
-        var name = Console.ReadLine();
-        phoneBook[phone] = name;
+        break;
     }
-    return phoneBook;
+    Console.WriteLine("Введите ФИО владельца");
+    var name = Console.ReadLine();
+    phoneBook.Add(new Person(name, phone));
 }
 
-static void FindNameFromPhoneBook(Dictionary<string, string> phoneBook)
+Console.WriteLine("Введите номер телефона для поиска владельца");
+var findPhone = Console.ReadLine();
+var person = phoneBook.FindByPhone(findPhone);
+if (person != null)
 {
-    Console.WriteLine("Введите номер телефона для поиска владельца");
-    var findPhone = Console.ReadLine();
-    if (phoneBook.TryGetValue(findPhone, out var findName))
-    {
-        Console.WriteLine($"Владелец:{findName}");
-    }
-    else
-    {
-        Console.WriteLine("Владелец данного телефонного номера не найден");
-    }
+    Console.WriteLine($"Владелец:{person.Name}");
 }
-
-
-
-
-
-
+else
+{
+    Console.WriteLine("Владелец данного телефонного номера не найден");
+}
 
 
 
